@@ -1,0 +1,34 @@
+set term=screen-256color
+
+execute pathogen#infect()
+syntax on
+filetype plugin indent on
+
+"vim-airline"
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+let g:airline_symbols.space = "\ua0"
+
+"FOR TMUX THEME
+let g:airline#extensions#tmuxline#enabled = 0
+
+" PERSONAL CONFIGURATIONS
+" editing
+" colorscheme codedark
+syntax enable
+set tabstop=4
+set softtabstop=4
+set number
+set showcmd
+" set cursorline
+set showmatch
+
+" searching
+set hlsearch
+
+" jk is escape
+inoremap jk <esc>
+
